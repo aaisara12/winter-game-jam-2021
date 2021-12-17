@@ -33,7 +33,6 @@ public class EnemyMovement : MonoBehaviour
         if(Time.time - lastMoveTime > (1/movesPerSecond))
         {
             targetDelta = Random.Range(-movementRange, movementRange);
-            Debug.LogFormat("Chosen delta: {0}", targetDelta);
             lastMoveTime = Time.time;
         }
     }
