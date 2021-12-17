@@ -35,6 +35,7 @@ public class ToastScript : MonoBehaviour
             healthMonitor.monitor.toastLowHealth(1);
             Debug.Log("toast's health is low: 10%");
         }
+
     }
 
     void takeDamage (int damage)

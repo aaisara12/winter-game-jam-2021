@@ -1053,8 +1053,8 @@ GameObject:
   - component: {fileID: 1333654037}
   - component: {fileID: 1333654036}
   - component: {fileID: 1333654035}
-  - component: {fileID: 1333654038}
   - component: {fileID: 1333654039}
+  - component: {fileID: 1333654038}
   m_Layer: 5
   m_Name: startBut
   m_TagString: Untagged
@@ -1188,7 +1188,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 540a22b56a1b0524096e5e95c9cfcee6, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 2
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
