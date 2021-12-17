@@ -5,17 +5,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    public int currentHealth;
-
+    public int playerMaxHealth = 100;
+    public int playerCurrentHealth;
     public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
         
-        currentHealth = maxHealth;
-        healthBar.setMaxHealth(maxHealth);
+        playerCurrentHealth = playerMaxHealth;
+        healthBar.setMaxHealth(playerMaxHealth);
     }
 
     // Update is called once per frame
@@ -25,13 +24,13 @@ public class Player : MonoBehaviour
         {
             takeDamage(10);
         }
-        if(currentHealth == 20)
+        if(playerCurrentHealth == 20)
         {
             healthMonitor.monitor.lowHealthIndicator(2);
             Debug.Log("player's health is low: 20%");
             
         }
-        else if (currentHealth == 10)
+        else if (playerCurrentHealth == 10)
         {
             healthMonitor.monitor.lowHealthIndicator(1);
             Debug.Log("player health is low: 10%");
@@ -40,8 +39,8 @@ public class Player : MonoBehaviour
 
     void takeDamage (int damage)
     {
-        currentHealth -= damage;
-        healthBar.setHealth(currentHealth);
+        playerCurrentHealth -= damage;
+        healthBar.setHealth(playerCurrentHealth);
     }
 
 }
