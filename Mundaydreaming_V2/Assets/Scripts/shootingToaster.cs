@@ -9,7 +9,7 @@ public class shootingToaster : MonoBehaviour
     public Transform shotPoint;
     public float timeSinceLastPew = 0;
     public float pewDelayTime = 4;
-    public float heightAbovePlayer = 20;
+    public float heightAbovePlayer = 0;
     public GameObject player;
     // Update is called once per frame
     void Update()
@@ -28,7 +28,7 @@ public class shootingToaster : MonoBehaviour
         {
             GameObject newProjectile = Instantiate(projectile, shotPoint.position, shotPoint.rotation);
             newProjectile.GetComponent<Rigidbody2D>().velocity = -1* transform.right * launchForce;
-            transform.position = new Vector3(transform.position.x, transform.position.y, 70);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, 70);
             timeSinceLastPew = 0;
         }
         else {

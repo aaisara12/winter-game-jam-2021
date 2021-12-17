@@ -23,8 +23,8 @@ public class shootingPlayer : MonoBehaviour
     
     void Shoot() {
         GameObject newProjectile = Instantiate(projectile, shotPoint.position, shotPoint.rotation);
-        newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
-        transform.position = new Vector3(transform.position.x, transform.position.y, 70);
+        newProjectile.GetComponent<Rigidbody2D>().AddForce(transform.right * launchForce);
+        //transform.position = new Vector3(transform.position.x, transform.position.y, 70);
     }
     
 }
