@@ -27,13 +27,13 @@ public class ToastScript : MonoBehaviour
         if(toastCurrentHealth == 20)
         {
             healthMonitor.monitor.toastLowHealth(2);
-            Debug.Log("player's health is low: 20%");
+            Debug.Log("toast's health is low: 20%");
             
         }
         else if (toastCurrentHealth == 10)
         {
             healthMonitor.monitor.toastLowHealth(1);
-            Debug.Log("player health is low: 10%");
+            Debug.Log("toast's health is low: 10%");
         }
     }
 

@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         else if (playerCurrentHealth == 10)
         {
             healthMonitor.monitor.playerLowHealth(1);
-            Debug.Log("player health is low: 10%");
+            Debug.Log("player's health is low: 10%");
         }
     }
 
