@@ -59,10 +59,11 @@ public class ToastScript : MonoBehaviour
         }
     }
 
-    void takeDamage (int damage)
+    public void takeDamage (int damage)
     {
         toastCurrentHealth -= damage;
         healthBar.setHealth(toastCurrentHealth);
+        GetComponent<Animator>().SetTrigger("Damaged");
         if (toastCurrentHealth == 0)
         {
             Time.timeScale = 0f;
