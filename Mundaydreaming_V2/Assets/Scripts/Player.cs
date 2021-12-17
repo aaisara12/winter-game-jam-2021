@@ -23,15 +23,18 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            takeDamage(20);
+            takeDamage(10);
         }
         if(currentHealth == 20)
         {
             healthMonitor.monitor.lowHealthIndicator(2);
+            Debug.Log("player's health is low: 20%");
+            
         }
         else if (currentHealth == 10)
         {
             healthMonitor.monitor.lowHealthIndicator(1);
+            Debug.Log("player health is low: 10%");
         }
     }
 
