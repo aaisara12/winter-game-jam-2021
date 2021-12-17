@@ -20,6 +20,8 @@ public class shootingPlayer : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             Shoot();
         }
+
+        GetComponentInParent<Animator>().SetBool("IsShooting", Input.GetMouseButton(0));
     }
     
     void Shoot() {

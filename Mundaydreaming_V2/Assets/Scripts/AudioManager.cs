@@ -22,17 +22,20 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] List<SoundSettings> sounds;
 
-    Dictionary<string, AudioSource> name2source;
+    Dictionary<string, AudioSource> name2source = new Dictionary<string, AudioSource>();
 
 
     void Awake()
     {
         instance = this;
 
+        DontDestroyOnLoad(this);
+
         // Convert editor values to real audio sources
         foreach(SoundSettings settings in sounds)
         {
             AudioSource newSource = gameObject.AddComponent<AudioSource>();
+            newSource.clip = settings.clip;
             newSource.volume = settings.volume;
             newSource.pitch = settings.pitch;
             newSource.loop = false;
@@ -41,6 +44,11 @@ public class AudioManager : MonoBehaviour
         }
 
         
+    }
+
+    void Start()
+    {
+        LoopSound("Main Theme");
     }
 
     public void PlaySound(string soundName)
@@ -66,6 +74,10 @@ public class AudioManager : MonoBehaviour
 struct SoundSettings
 {
     public string soundName;
+    [Range(0, 1)]
     public float volume;
+
+    [Range(0.1f, 2)]
     public float pitch;
+    public AudioClip clip;
 }
