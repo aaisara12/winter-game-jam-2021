@@ -5,16 +5,17 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    public int currentHealth;
-
+    public int playerMaxHealth = 100;
+    public int playerCurrentHealth;
     public HealthBar healthBar;
+    public DialogueManager manager;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.setMaxHealth(maxHealth);
+        
+        playerCurrentHealth = playerMaxHealth;
+        healthBar.setMaxHealth(playerMaxHealth);
     }
 
     // Update is called once per frame
@@ -22,13 +23,14 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            takeDamage(20);
+            takeDamage(10);
         }
     }
 
     void takeDamage (int damage)
     {
-        currentHealth -= damage;
-        healthBar.setHealth(currentHealth);
+        playerCurrentHealth -= damage;
+        healthBar.setHealth(playerCurrentHealth);
     }
+
 }
