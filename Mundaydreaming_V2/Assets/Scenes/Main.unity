@@ -333,7 +333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: -6.7688}
+  m_AnchoredPosition: {x: 80, y: -128}
   m_SizeDelta: {x: 1139.6343, y: 319.2136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258190251
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.35457456, g: 0.63246095, b: 0.9056604, a: 1}
+  m_Color: {r: 0.45364508, g: 0.90588236, b: 0.35294116, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -361,9 +361,9 @@ MonoBehaviour:
     m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1674,8 +1674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67.514, y: -446}
-  m_SizeDelta: {x: 1014.973, y: 137.921}
+  m_AnchoredPosition: {x: 3, y: -437.624}
+  m_SizeDelta: {x: 1063.721, y: 167.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935391451
 MonoBehaviour:
@@ -1690,14 +1690,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.87787366, g: 0.93333334, b: 0.8235294, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1219ec2765c3e604a9b33745dd937ac4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2317,10 +2317,35 @@ MonoBehaviour:
   dialogueText: {fileID: 258190251}
   animator: {fileID: 935391453}
   sentenceContainer:
-  - Player is 20% hp
-  - Player is 10% hp
-  - Toasty is 20% hp
-  - Toasty is 10% hp
+  - "3\u2026 2\u2026 1\u2026\r\nHappy New Year\u2026\r\n\u2026\r"
+  - "WelCoME tO 20o0, nORmAN!\r\ni\u2019M sURe ThIs WilL bE A gREaT yEar!\r"
+  - "First overtime, then welcoming the new year alone, and now *this*!?\r\nThis
+    millennium is off to a crumby start\u2026\r"
+  - "HAhAha!\r\nwElL, iT doESn\u2019T gET AnY bUTtEr tHan THiS.\r\nrEAlLy. It DoESn\u2019T.\r"
+  - "Y2K-compliant, they said.\r\nSmall household appliances are okay, they said.\r\nThis
+    is the last time I trust CNN.\r"
+  - "NeGAtIve! tHe rEPoRtiNg waS nOt a FaLSehOOd!\r\nI aM sIMpLY bUiLT difFeRENt!\r"
+  - "Well soon you won\u2019t be built at all. Hyah!\r"
+  - "Heh, you\u2019re looking a little sour there, dough.\r\nOkay, I knead to stop.\r\n\u2026
+    Shoot\u2026\r"
+  - "hAHaHa!\r"
+  - "Looks like I\u2019ll wrap this up soon.\r\nGood, because it\u2019s way past
+    my breadtime\u2013 I mean bedtime.\r"
+  - "yOu BrEAd mY MiNd!\r"
+  - "\u2026\r\nI think I\u2019ll need a long vacation after this\u2026\r"
+  sentenceSpeakers:
+  - Norman
+  - Toaster
+  - Norman
+  - Toaster
+  - Norman
+  - Toaster
+  - Norman
+  - Norman
+  - Toaster
+  - Norman
+  - Toaster
+  - Norman
 --- !u!4 &1370040409
 Transform:
   m_ObjectHideFlags: 0
@@ -2821,7 +2846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -438.085, y: 41}
+  m_AnchoredPosition: {x: -423, y: 65}
   m_SizeDelta: {x: 323.847, y: 64.225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1819384952
@@ -2837,7 +2862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.26379493, g: 0.72172064, b: 0.9811321, a: 1}
+  m_Color: {r: 0.017396044, g: 0.084905684, b: 0.010813461, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

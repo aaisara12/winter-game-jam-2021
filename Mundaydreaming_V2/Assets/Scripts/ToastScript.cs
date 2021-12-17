@@ -9,7 +9,7 @@ public class ToastScript : MonoBehaviour
     public int toastCurrentHealth;
     public HealthBar healthBar;
     public DialogueManager manager;
-    private bool played0, played1 = false;
+    private bool played100, played80, played60, played40, played20 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,18 +26,36 @@ public class ToastScript : MonoBehaviour
         {
             takeDamage(10);
         }
-        if(toastCurrentHealth == 20)
+        switch (toastCurrentHealth)
         {
-            if (played0 == false)
-                manager.StartDialogue("Toasty", 2);
-            played0 = true;
-            
-        }
-        else if (toastCurrentHealth == 10)
-        {
-            if (played1 == false)
-                manager.StartDialogue("Toasty", 3);
-            played1 = true;
+            case 100:
+                if (played100 == false)
+                    manager.StartDialogue(0, 1);
+                played100 = true;
+                break;
+            case 80:
+                if (played80 == false)
+                    manager.StartDialogue(2, 3);
+                played80 = true;
+                break;
+            case 60:
+                if (played60 == false)
+                    manager.StartDialogue(4, 6);
+                played60 = true;
+                break;
+            case 40:
+                if (played40 == false)
+                    manager.StartDialogue(7, 8);
+                played40 = true;
+                break;
+            case 20:
+                if (played20 == false)
+                    manager.StartDialogue(9, 11);
+                played20 = true;
+                break;
+            default:
+                // do nothing
+                break;
         }
     }
 
