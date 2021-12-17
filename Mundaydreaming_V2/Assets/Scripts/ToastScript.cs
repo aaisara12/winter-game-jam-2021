@@ -24,17 +24,6 @@ public class ToastScript : MonoBehaviour
         {
             takeDamage(5);
         }
-        if(toastCurrentHealth == 20)
-        {
-            healthMonitor.monitor.toastLowHealth(2);
-            Debug.Log("toast's health is low: 20%");
-            
-        }
-        else if (toastCurrentHealth == 10)
-        {
-            healthMonitor.monitor.toastLowHealth(1);
-            Debug.Log("toast's health is low: 10%");
-        }
 
     }
 
@@ -42,5 +31,6 @@ public class ToastScript : MonoBehaviour
     {
         toastCurrentHealth -= damage;
         healthBar.setHealth(toastCurrentHealth);
+        healthMonitor.monitor.toastLowHealth(toastCurrentHealth);
     }
 }
