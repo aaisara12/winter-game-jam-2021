@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87ac8dc389010034c919662a45fb81c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42a623f454716f14e822aafc72ed83c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 121528357}
   - component: {fileID: 121528356}
   - component: {fileID: 121528355}
+  - component: {fileID: 121528359}
   m_Layer: 5
   m_Name: menuBut
   m_TagString: Untagged
@@ -294,7 +295,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 121528359}
         m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
         m_MethodName: retMainMenu
         m_Mode: 1
@@ -344,6 +345,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121528353}
   m_CullTransparentMesh: 1
+--- !u!114 &121528359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121528353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71707ebf22d0503489c6ff06d99d4480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &145290004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +1992,7 @@ GameObject:
   - component: {fileID: 654308303}
   - component: {fileID: 654308302}
   - component: {fileID: 654308301}
+  - component: {fileID: 654308305}
   m_Layer: 5
   m_Name: menuBut
   m_TagString: Untagged
@@ -2061,7 +2076,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 654308305}
         m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
         m_MethodName: retMainMenu
         m_Mode: 1
@@ -2111,6 +2126,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654308299}
   m_CullTransparentMesh: 1
+--- !u!114 &654308305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654308299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71707ebf22d0503489c6ff06d99d4480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &723171850
 GameObject:
   m_ObjectHideFlags: 0
