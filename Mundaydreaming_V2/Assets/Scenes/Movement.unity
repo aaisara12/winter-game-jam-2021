@@ -134,8 +134,13 @@ GameObject:
   - component: {fileID: 153958851}
   - component: {fileID: 153958850}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 153958852}
   - component: {fileID: 153958849}
+=======
+  - component: {fileID: 153958849}
+  - component: {fileID: 153958852}
+>>>>>>> parent of 853f11d (Merge branch 'Health' into Dialogue)
 =======
   - component: {fileID: 153958849}
   - component: {fileID: 153958852}
