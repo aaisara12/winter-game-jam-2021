@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float movesPerSecond = 0.5f;
 
     float startPosition;
+    float centerPosition;
     float currentPosition;
     float targetDelta = 0;  // How far away from the start position should this enemy move?
 
@@ -23,11 +24,13 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        centerPosition = transform.parent.position.x + startPosition;
+
         currentPosition = transform.position.x;
 
-        if(Mathf.Abs((currentPosition - startPosition) - targetDelta) > 0.5f)
+        if(Mathf.Abs((currentPosition - centerPosition) - targetDelta) > 0.5f)
         {
-            transform.Translate(((startPosition + targetDelta) - currentPosition) * Vector3.right * speed * Time.deltaTime);
+            transform.Translate(((centerPosition + targetDelta) - currentPosition) * Vector3.right * speed * Time.deltaTime);
         }
 
         if(Time.time - lastMoveTime > (1/movesPerSecond))
