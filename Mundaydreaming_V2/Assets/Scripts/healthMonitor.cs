@@ -11,10 +11,16 @@ public class healthMonitor : MonoBehaviour
     {
         monitor = this;
     }
-    public event Action<int> onLowHealthIndicator;
-    public void lowHealthIndicator(int id)
+    public event Action<int> onplayerLowHealth;
+    public void playerLowHealth(int id)
     {  
-        onLowHealthIndicator?.Invoke(id);
+        onplayerLowHealth?.Invoke(id);
+    }
+
+    public event Action<int> onToastLowHealth;
+    public void toastLowHealth(int id)
+    {
+        onToastLowHealth?.Invoke(id);
     }
 
 }

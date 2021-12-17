@@ -26,13 +26,13 @@ public class Player : MonoBehaviour
         }
         if(playerCurrentHealth == 20)
         {
-            healthMonitor.monitor.lowHealthIndicator(2);
+            healthMonitor.monitor.playerLowHealth(2);
             Debug.Log("player's health is low: 20%");
             
         }
         else if (playerCurrentHealth == 10)
         {
-            healthMonitor.monitor.lowHealthIndicator(1);
+            healthMonitor.monitor.playerLowHealth(1);
             Debug.Log("player health is low: 10%");
         }
     }
