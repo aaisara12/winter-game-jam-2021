@@ -10,6 +10,9 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    [TextArea(3, 10)]
+    public string[] sentenceContainer;
+
     private Queue<string> sentences;
 
     private float countDownTimer;
@@ -19,6 +22,8 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         countDownTimer = 5;
+
+        healthMonitor.onplayerLowHealth += StartDialogue;
     }
 
     void Update()
@@ -30,31 +35,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(string name, int number)
     {
         animator.SetBool("IsOpen", true);
+        nameText.text = name;
 
-        nameText.text = dialogue.name;
-
-        sentences.Clear();
-        foreach (string sentence in dialogue.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
-
-        DisplayNextSentence();
+        DisplayNextSentence(number);
     }
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentence(int number)
     {
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-
         countDownTimer = 5;
-        string sentence = sentences.Dequeue();
+        string sentence = sentenceContainer[number];
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     } 

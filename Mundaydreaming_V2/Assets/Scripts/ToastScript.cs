@@ -8,6 +8,8 @@ public class ToastScript : MonoBehaviour
     public int toastMaxHealth = 100;
     public int toastCurrentHealth;
     public HealthBar healthBar;
+    public DialogueManager manager;
+    private bool played0, played1 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +28,16 @@ public class ToastScript : MonoBehaviour
         }
         if(toastCurrentHealth == 20)
         {
-            healthMonitor.monitor.toastLowHealth(2);
-            Debug.Log("toast's health is low: 20%");
+            if (played0 == false)
+                manager.StartDialogue("Toasty", 2);
+            played0 = true;
             
         }
         else if (toastCurrentHealth == 10)
         {
-            healthMonitor.monitor.toastLowHealth(1);
-            Debug.Log("toast's health is low: 10%");
+            if (played1 == false)
+                manager.StartDialogue("Toasty", 3);
+            played1 = true;
         }
     }
 

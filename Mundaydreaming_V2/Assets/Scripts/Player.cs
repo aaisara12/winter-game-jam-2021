@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public int playerMaxHealth = 100;
     public int playerCurrentHealth;
     public HealthBar healthBar;
+    public DialogueManager manager;
+    private bool played0, played1 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +28,15 @@ public class Player : MonoBehaviour
         }
         if(playerCurrentHealth == 20)
         {
-            healthMonitor.monitor.playerLowHealth(2);
-            Debug.Log("player's health is low: 20%");
-            
+            if (played0 == false)
+                manager.StartDialogue("Norman", 0);
+            played0 = true;
         }
         else if (playerCurrentHealth == 10)
         {
-            healthMonitor.monitor.playerLowHealth(1);
-            Debug.Log("player's health is low: 10%");
+            if (played1 == false)
+                manager.StartDialogue("Norman", 1);
+            played1 = true;
         }
     }
 
