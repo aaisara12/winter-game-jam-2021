@@ -29,7 +29,6 @@ public class Player : MonoBehaviour
     void takeDamage (int damage)
     {
         currentHealth -= damage;
-
         healthBar.setHealth(currentHealth);
     }
 }
