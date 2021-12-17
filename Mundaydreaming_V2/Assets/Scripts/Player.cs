@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+     public deathScreenScript deathScreen;
     public int playerMaxHealth = 100;
     public int playerCurrentHealth;
     public HealthBar healthBar;
@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         playerCurrentHealth = playerMaxHealth;
         healthBar.setMaxHealth(playerMaxHealth);
     }
@@ -25,18 +24,17 @@ public class Player : MonoBehaviour
             takeDamage(10);
         }
         
-        if(playerCurrentHealth <= 0)
-        {
-            
-        }
-
     }
 
     void takeDamage (int damage)
     {
         playerCurrentHealth -= damage;
         healthBar.setHealth(playerCurrentHealth);
-        healthMonitor.monitor.playerLowHealth(playerCurrentHealth);
+        if (playerCurrentHealth == 0)
+        {
+            deathScreen.setDead();
+        }
     }
+
 
 }

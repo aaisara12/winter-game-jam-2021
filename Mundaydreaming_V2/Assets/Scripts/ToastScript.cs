@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ToastScript : MonoBehaviour
 {
-    
+    public deathScreenScript victoryScreen;
     public int toastMaxHealth = 100;
     public int toastCurrentHealth;
     public HealthBar healthBar;
@@ -31,6 +31,10 @@ public class ToastScript : MonoBehaviour
     {
         toastCurrentHealth -= damage;
         healthBar.setHealth(toastCurrentHealth);
-        healthMonitor.monitor.toastLowHealth(toastCurrentHealth);
+        if (toastCurrentHealth == 0)
+        {
+            Time.timeScale = 0f;
+            victoryScreen.setDead();
+        }
     }
 }
