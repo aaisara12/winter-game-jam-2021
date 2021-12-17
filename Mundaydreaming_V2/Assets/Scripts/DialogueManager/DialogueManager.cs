@@ -12,10 +12,22 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    private float countDownTimer;
+
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        countDownTimer = 5;
+    }
+
+    void Update()
+    {
+        countDownTimer -= Time.deltaTime;
+        if (countDownTimer <= 0)
+        {
+            EndDialogue();
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -41,6 +53,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        countDownTimer = 5;
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
@@ -52,7 +65,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
     }
 
