@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class deathScreenScript : MonoBehaviour
 {
+    //dummy change
     public void setDead()
     {
         gameObject.SetActive(true);
