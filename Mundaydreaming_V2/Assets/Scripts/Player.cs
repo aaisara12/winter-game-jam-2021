@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
     }
@@ -24,6 +25,14 @@ public class Player : MonoBehaviour
         {
             takeDamage(20);
         }
+        if(currentHealth == 20)
+        {
+            healthMonitor.monitor.lowHealthIndicator(2);
+        }
+        else if (currentHealth == 10)
+        {
+            healthMonitor.monitor.lowHealthIndicator(1);
+        }
     }
 
     void takeDamage (int damage)
@@ -31,4 +40,5 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
         healthBar.setHealth(currentHealth);
     }
+
 }
