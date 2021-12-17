@@ -27,10 +27,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    void takeDamage (int damage)
+    public void takeDamage (int damage)
     {
         playerCurrentHealth -= damage;
         healthBar.setHealth(playerCurrentHealth);
+        GetComponent<Animator>().SetTrigger("Damaged");
     }
 
 }
