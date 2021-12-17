@@ -7,7 +7,8 @@ public class shootingPlayer : MonoBehaviour
     public GameObject projectile;
     public float launchForce;
     public Transform shotPoint;
-    
+    public float firerate;
+    float nextfire;
     // Update is called once per frame
     void Update()
     {
@@ -24,9 +25,12 @@ public class shootingPlayer : MonoBehaviour
     }
     
     void Shoot() {
-        GameObject newProjectile = Instantiate(projectile, shotPoint.position, shotPoint.rotation);
-        newProjectile.GetComponent<Rigidbody2D>().AddForce(transform.right * launchForce);
-        //transform.position = new Vector3(transform.position.x, transform.position.y, 70);
+        if (Time.time > nextfire) {
+            nextfire = Time.time + firerate;
+            GameObject newProjectile = Instantiate(projectile, shotPoint.position, shotPoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().AddForce(transform.right * launchForce);
+        }
+        
     }
     
 }
