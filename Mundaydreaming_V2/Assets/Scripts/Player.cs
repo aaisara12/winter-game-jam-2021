@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public deathScreenScript deathScreen;
     public int playerMaxHealth = 100;
     public int playerCurrentHealth;
     public HealthBar healthBar;
@@ -31,6 +31,10 @@ public class Player : MonoBehaviour
     {
         playerCurrentHealth -= damage;
         healthBar.setHealth(playerCurrentHealth);
+        if (playerCurrentHealth == 0)
+        {
+            deathScreen.setDead();
+        }
     }
 
 }
