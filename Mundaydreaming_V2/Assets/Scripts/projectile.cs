@@ -17,10 +17,11 @@ public class projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Time.time - timeStart >= lifetimeSeconds)
             Destroy(this.gameObject);
-
-        transform.Translate(transform.right * Time.deltaTime * GetComponent<Rigidbody2D>().velocity);
+        */
+        //transform.Translate(transform.right * Time.deltaTime * GetComponent<Rigidbody2D>().velocity);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)

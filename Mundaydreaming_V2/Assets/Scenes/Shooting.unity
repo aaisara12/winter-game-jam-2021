@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 5411929564154481377, guid: 0949efac6e029ed46967f6e8909e6b49, type: 3}
-  launchForce: 13
+  launchForce: 1000
   shotPoint: {fileID: 1940813963}
 --- !u!212 &127223601
 SpriteRenderer:
@@ -237,9 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfba44b204aa8224893712af2c016ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
+  playerMaxHealth: 100
+  playerCurrentHealth: 0
   healthBar: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!61 &127223604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -438,9 +439,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfba44b204aa8224893712af2c016ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
+  playerMaxHealth: 100
+  playerCurrentHealth: 0
   healthBar: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!1 &698064252
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292665771}
   m_LocalRotation: {x: -0, y: -0, z: 0.6800283, w: -0.7331859}
-  m_LocalPosition: {x: -0.005282183, y: 0.49410105, z: -98.28068}
+  m_LocalPosition: {x: -0.005282183, y: 0.49410105, z: 0}
   m_LocalScale: {x: 0.2641031, y: 0.5041847, z: 1}
   m_Children: []
   m_Father: {fileID: 376295395}
@@ -796,7 +798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940813962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.51, y: -0.05, z: -11.028874}
+  m_LocalPosition: {x: 0.51, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 127223602}
