@@ -20,9 +20,9 @@ public class ToastScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Y) && toastCurrentHealth > 0)
         {
-            takeDamage(10);
+            takeDamage(5);
         }
         if(toastCurrentHealth == 20)
         {
