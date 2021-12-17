@@ -27,7 +27,8 @@ public class projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        hitInfo.GetComponent<PlayerStandIn>()?.takeDamage(damage);
+        hitInfo.GetComponent<Player>()?.takeDamage(damage);
+        hitInfo.GetComponent<ToastScript>()?.takeDamage(damage);
         Destroy(this.gameObject);
     }
 
