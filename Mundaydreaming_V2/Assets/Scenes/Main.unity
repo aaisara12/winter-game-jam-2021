@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 2813346271625666707, guid: a4672725484b0084f86c7d937fc1d20c, type: 3}
-  launchForce: 11
+  launchForce: 5
   shotPoint: {fileID: 1125238083}
   timeSinceLastPew: 0
   pewDelayTime: 4
