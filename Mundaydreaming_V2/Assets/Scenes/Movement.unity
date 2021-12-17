@@ -133,8 +133,13 @@ GameObject:
   m_Component:
   - component: {fileID: 153958851}
   - component: {fileID: 153958850}
+<<<<<<< HEAD
   - component: {fileID: 153958852}
   - component: {fileID: 153958849}
+=======
+  - component: {fileID: 153958849}
+  - component: {fileID: 153958852}
+>>>>>>> parent of 853f11d (Merge branch 'Health' into Dialogue)
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
