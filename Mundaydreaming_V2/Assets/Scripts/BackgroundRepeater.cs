@@ -18,9 +18,9 @@ public class BackgroundRepeater : MonoBehaviour
 
     void FixedUpdate()
     {
-        float lengthOfBackgroundTraversed = gameCamera.transform.position.x * (1 - parallax);
+        float distanceTraveledByBackground = gameCamera.transform.position.x * (1 - parallax);
 
-        if(lengthOfBackgroundTraversed >= startPos + length)
+        if(distanceTraveledByBackground >= startPos + length)
             startPos += length;
 
         transform.position = new Vector3(startPos + gameCamera.transform.position.x * parallax, transform.position.y, transform.position.z);
