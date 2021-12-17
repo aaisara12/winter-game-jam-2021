@@ -24,23 +24,19 @@ public class Player : MonoBehaviour
         {
             takeDamage(10);
         }
-        if(playerCurrentHealth == 20)
+        
+        if(playerCurrentHealth <= 0)
         {
-            healthMonitor.monitor.playerLowHealth(2);
-            Debug.Log("player's health is low: 20%");
             
         }
-        else if (playerCurrentHealth == 10)
-        {
-            healthMonitor.monitor.playerLowHealth(1);
-            Debug.Log("player's health is low: 10%");
-        }
+
     }
 
     void takeDamage (int damage)
     {
         playerCurrentHealth -= damage;
         healthBar.setHealth(playerCurrentHealth);
+        healthMonitor.monitor.playerLowHealth(playerCurrentHealth);
     }
 
 }
