@@ -17,4 +17,10 @@ public class deathScreenScript : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
     
+    public void quitGame()
+    {
+        Time.timeScale = 1f;
+        gameObject.SetActive(false);
+        Application.Quit();
+    }
 }

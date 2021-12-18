@@ -791,6 +791,7 @@ GameObject:
   - component: {fileID: 297730908}
   - component: {fileID: 297730907}
   - component: {fileID: 297730906}
+  - component: {fileID: 297730910}
   m_Layer: 5
   m_Name: quitBut
   m_TagString: Untagged
@@ -874,8 +875,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 297730910}
+        m_TargetAssemblyTypeName: deathScreenScript, Assembly-CSharp
         m_MethodName: quitGame
         m_Mode: 1
         m_Arguments:
@@ -924,6 +925,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297730904}
   m_CullTransparentMesh: 1
+--- !u!114 &297730910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297730904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b296fa33b95b140b3987c831744472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &299607404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +1999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 2813346271625666707, guid: a4672725484b0084f86c7d937fc1d20c, type: 3}
-  launchForce: 11
+  launchForce: 5
   shotPoint: {fileID: 1125238083}
   timeSinceLastPew: 0
   pewDelayTime: 4
@@ -3343,7 +3356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1219ec2765c3e604a9b33745dd937ac4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc8dc7790d8833341b01a21bb5fd6b38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3985,6 +3998,7 @@ GameObject:
   - component: {fileID: 1211632516}
   - component: {fileID: 1211632515}
   - component: {fileID: 1211632514}
+  - component: {fileID: 1211632518}
   m_Layer: 5
   m_Name: quitBut
   m_TagString: Untagged
@@ -4068,8 +4082,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1211632518}
+        m_TargetAssemblyTypeName: deathScreenScript, Assembly-CSharp
         m_MethodName: quitGame
         m_Mode: 1
         m_Arguments:
@@ -4118,6 +4132,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211632512}
   m_CullTransparentMesh: 1
+--- !u!114 &1211632518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211632512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b296fa33b95b140b3987c831744472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257520168
 GameObject:
   m_ObjectHideFlags: 0
